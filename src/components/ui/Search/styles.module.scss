@@ -1,0 +1,55 @@
+@use "styles/mixins" as *;
+
+.searchRoot {
+  padding: 0 rem(12);
+
+  border-radius: var(--s-xs-rounding);
+
+  background-color: var(--background-primary);
+
+  outline: rem(2) solid var(--tertiary-first);
+  outline-offset: minus-rem(2);
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: rem(12);
+  align-items: center;
+
+  height: 100%;
+}
+
+.icon {
+  width: rem(24);
+  height: rem(24);
+
+  svg {
+    stroke: var(--text-primary);
+  }
+}
+
+.searchInput {
+  @include regular-12;
+
+  height: 100%;
+
+  color: var(--text-primary);
+
+  border: none;
+
+  background-color: transparent;
+
+  outline: none;
+
+  overflow: hidden;
+
+  &::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}

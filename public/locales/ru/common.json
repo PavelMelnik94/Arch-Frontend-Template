@@ -1,0 +1,25 @@
+{
+  "menu": {
+    "game": "Игра",
+    "upgrades": "Улучшения",
+    "friends": "Друзья",
+    "tasks": "Задания",
+    "rating": "Рейтинг"
+  },
+  "pathnames": {
+    "game": "Игра",
+    "upgrades": "Улучшения",
+    "friends": "Друзья",
+    "tasks": "Задания",
+    "rating": "Рейтинг",
+    "prizeDetails": "Приз"
+  },
+  "task": {
+    "titleCard": "ПОЛУЧИ БОЛЬШЕ МОНЕТ",
+    "list": "Список заданий"
+  },
+  "tooltip": "Tooltip",
+  "errors": {
+    "drawCurrentNotFound": "No active draw"
+  }
+}

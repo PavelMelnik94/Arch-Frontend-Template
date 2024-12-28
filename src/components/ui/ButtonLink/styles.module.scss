@@ -1,0 +1,109 @@
+@use "styles/mixins" as *;
+
+@mixin base-button {
+  @include semibold-16;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: rem(48);
+  padding: 0 rem(10);
+}
+
+// Button Variant
+
+.button_variant_solid {
+  @include base-button;
+
+  color: var(--text-color);
+
+  border-radius: var(--s-xs-rounding);
+
+  background-color: var(--background-color);
+
+  &:active:not([aria-disabled]) {
+    background-color: var(--background-color);
+  }
+
+  &[aria-disabled] {
+    cursor: auto;
+  }
+}
+
+.button_variant_outline {
+  @include base-button;
+
+  color: var(--text-color);
+
+  border: 2px solid;
+  border-color: var(--tertiary-first);
+  border-radius: var(--s-xs-rounding);
+
+  background-color: var(--background-color);
+
+  &:active:not([aria-disabled]) {
+    border-color: var(--background-color);
+  }
+
+  &[aria-disabled] {
+    cursor: auto;
+  }
+}
+
+// Colors
+
+.button_color_first {
+  --text-color: var(--text-secondary);
+  --background-color: var(--primary);
+
+  &:hover:not([aria-disabled]),
+  &:active:not([aria-disabled]) {
+    opacity: 0.8;
+  }
+
+  &[aria-disabled]:not(.buttonLoading) {
+    --text-color: var(--text-tertiary);
+    --background-color: var(--background-secondary);
+    cursor: default;
+  }
+}
+
+.button_color_second {
+  --text-color: var(--text-primary);
+  --background-color: var(--secondary-second);
+
+  &:hover:not([aria-disabled]),
+  &:active:not([aria-disabled]) {
+    opacity: 0.8;
+  }
+
+  &[aria-disabled]:not(.buttonLoading) {
+    --text-color: var(--text-tertiary);
+    --background-color: var(--background-secondary);
+    cursor: default;
+  }
+}
+
+.button_color_third {
+  --text-color: var(--text-secondary);
+  --background-color: var(--secondary-first);
+
+  &:hover:not([aria-disabled]),
+  &:active:not([aria-disabled]) {
+    opacity: 0.8;
+  }
+
+  &[aria-disabled]:not(.buttonLoading) {
+    --text-color: var(--text-tertiary);
+    --background-color: var(--background-secondary);
+    cursor: auto;
+  }
+}
+
+.buttonLoading {
+}
+
+.maxWidth {
+  width: 100%;
+}

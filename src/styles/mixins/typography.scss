@@ -1,0 +1,65 @@
+@use "./mixins.scss" as *;
+
+@mixin regular-12 {
+  font-weight: 400;
+  font-size: rem(12);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin regular-14 {
+  font-weight: 400;
+  font-size: rem(14);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin regular-16 {
+  font-weight: 400;
+  font-size: rem(16);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin regular-20 {
+  font-weight: 400;
+  font-size: rem(20);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin semibold-8 {
+  font-weight: 600;
+  font-size: rem(8);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin semibold-14 {
+  font-weight: 600;
+  font-size: rem(14);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin semibold-16 {
+  font-weight: 600;
+  font-size: rem(16);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+@mixin semibold-20 {
+  font-weight: 600;
+  font-size: rem(20);
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}

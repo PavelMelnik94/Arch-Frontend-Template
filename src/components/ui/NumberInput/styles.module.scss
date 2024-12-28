@@ -1,0 +1,81 @@
+@use "styles/mixins" as *;
+
+.numberInputRoot {
+  width: rem(111);
+}
+
+.numberInput_color_first .inputWrapper {
+  background-color: var(--background-secondary);
+}
+
+.numberInput_color_second .inputWrapper {
+  background-color: var(--background-primary);
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  padding: 0;
+
+  border-radius: var(--s-xs-rounding);
+}
+
+.number {
+  @include semibold-16;
+
+  display: inline-block;
+
+  width: rem(39);
+
+  text-align: center;
+
+  border: none;
+
+  background: none;
+
+  outline: none;
+}
+
+.action {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  height: 100%;
+
+  &:disabled {
+    pointer-events: none;
+
+    svg rect {
+      fill: var(--text-tertiary);
+    }
+  }
+
+  &[data-focused] {
+    outline: none;
+  }
+
+  svg g {
+    fill: var(--primary);
+  }
+
+  svg rect {
+    fill: var(--primary);
+  }
+}
+
+.actionIcon {
+  width: rem(20);
+  height: rem(20);
+}
+
+.actionMinus {
+  justify-content: flex-end;
+}
+
+.actionPlus {
+  justify-content: flex-start;
+}

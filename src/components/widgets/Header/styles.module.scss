@@ -1,0 +1,15 @@
+@use "styles/mixins" as *;
+
+.headerRoot {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 100vw;
+  padding: var(--spacing-x2) var(--spacing-x3);
+
+  border-radius: 0 0 rem(16) rem(16);
+
+  background-color: var(--tapp-grey-1);
+}

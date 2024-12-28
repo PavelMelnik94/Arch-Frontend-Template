@@ -1,0 +1,125 @@
+@use "styles/mixins" as *;
+
+.welcomeRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.welcomeBackgroundContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--secondary-first);
+
+  overflow: hidden;
+}
+
+.welcomeBackground {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../../../assets/icons/common/welcome-grid.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  animation: 1s linear backgroundAppear;
+}
+
+@keyframes backgroundAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.sphereImage {
+  width: 756px;
+  height: 760px;
+  rotate: 90deg;
+}
+
+.sphereImageTop {
+  position: absolute;
+  top: -591px;
+
+  animation: 1s ease sphereImageTop;
+}
+
+@keyframes sphereImageTop {
+  from {
+    opacity: 0;
+    transform: translateX(-169px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sphereImageBottom {
+  position: absolute;
+  bottom: -487px;
+
+  animation: 1s ease sphereImageBottom;
+}
+
+@keyframes sphereImageBottom {
+  from {
+    opacity: 0;
+    transform: translateX(273px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.contentBlock {
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.logoIcon {
+  height: rem(22);
+}
+
+.welcomeDescription {
+  @include semibold-16;
+  margin-top: rem(16);
+
+  color: var(--text-secondary);
+}
+
+.welcomeButton {
+  margin-top: rem(40);
+}

@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: "template"
+    ports:
+      - 4000:80
+    build: .
+    env_file:
+      - .env
+    restart: always
