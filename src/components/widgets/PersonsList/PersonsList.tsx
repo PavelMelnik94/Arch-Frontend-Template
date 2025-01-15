@@ -34,7 +34,6 @@ const PersonsList = ({ className }: Props) => {
             companyTitle={user.company.title}
             companyName={user.company.name}
             age={user.age}
-            eyeColor={user.eyeColor}
             handlePressDelete={() => deletePerson(user.id)}
           />
         ))
