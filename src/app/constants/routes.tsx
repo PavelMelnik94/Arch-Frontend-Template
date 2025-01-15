@@ -1,11 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Paths } from 'constants/paths'
 import { NotFoundRoute, Route } from '@tanstack/react-router'
+import Main from 'components/pages/Main'
 import NotFound from 'components/pages/NotFound'
+import Welcome from 'components/pages/Welcome'
 import Suspense from 'components/wrappers/Suspense/Suspense'
 import { rootRoute } from './router'
-import Welcome from 'components/pages/Welcome'
-import Main from 'components/pages/Main'
 
 const welcomeRoute = new Route({
   getParentRoute: () => rootRoute,
@@ -36,7 +36,4 @@ export const notFoundRoute = new NotFoundRoute({
   )
 })
 
-export const routes = [
-  welcomeRoute,
-  mainRoute
-]
+export const routes = [welcomeRoute, mainRoute]

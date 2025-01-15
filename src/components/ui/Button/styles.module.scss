@@ -1,4 +1,4 @@
-@use "styles/mixins" as *;
+@use 'styles/mixins' as *;
 
 @mixin base-button {
   @include semibold-14;
@@ -8,6 +8,7 @@
 
   height: rem(56);
   padding: var(--spacing-x2);
+
   border-radius: var(--xxl-rounding);
 }
 

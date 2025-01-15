@@ -2,17 +2,11 @@ import { create } from 'zustand'
 import { UserResponse } from 'models/user/api'
 
 interface State {
-  user: UserResponse
+  user: UserResponse | null
   setUser: (data: UserResponse) => void
 }
 
 export const useUserStore = create<State>(set => ({
-  user: {
-    id: 0,
-    username: null,
-    firstName: null,
-    lastName: null,
-    image: null
-  },
+  user: null,
   setUser: data => set(_state => ({ user: data }))
 }))

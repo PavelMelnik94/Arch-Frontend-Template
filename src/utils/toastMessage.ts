@@ -1,5 +1,5 @@
-import toast from 'react-hot-toast'
 import Toast from 'components/ui/Toast'
+import toast from 'react-hot-toast'
 
 export const getToastMessage = (message: string) => {
   toast(toast => Toast({ toastId: toast.id, message }), {

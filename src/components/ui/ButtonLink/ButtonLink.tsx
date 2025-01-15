@@ -1,4 +1,3 @@
-
 import { Link, LinkProps } from '@tanstack/react-router'
 import { ReactNode } from 'react'
 import { cc } from 'utils/combineClasses'
@@ -10,7 +9,6 @@ interface Props extends LinkProps {
   variant?: 'solid' | 'outline'
   color?: 'first' | 'second' | 'third'
   className?: string
-  externalHref?: string
   nonePadding?: boolean
   maxWidth?: boolean
   isDisabled?: boolean
@@ -24,7 +22,6 @@ const ButtonLink = (props: Props) => {
     variant = 'solid',
     color = 'first',
     maxWidth,
-    externalHref,
     isLoading = false,
     isDisabled = false,
     ...otherProps

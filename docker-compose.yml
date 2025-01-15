@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: "template"
+    container_name: ${APP_CONTAINER_NAME}
     ports:
       - 4000:80
     build: .

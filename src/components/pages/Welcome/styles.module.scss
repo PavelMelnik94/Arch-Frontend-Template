@@ -1,4 +1,4 @@
-@use "styles/mixins" as *;
+@use 'styles/mixins' as *;
 
 .welcomeRoot {
   display: flex;
@@ -37,7 +37,7 @@
   width: 100%;
   height: 100%;
 
-  background-image: url("../../../assets/icons/common/welcome-grid.svg");
+  background-image: url('../../../assets/icons/common/welcome-grid.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

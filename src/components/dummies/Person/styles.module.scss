@@ -1,0 +1,28 @@
+@use 'styles/mixins' as *;
+
+.personRoot {
+  display: grid;
+  grid-template: '. . . . . .' 1fr / 40fr 250fr 250fr 250fr 80fr 30fr;
+  gap: rem(20);
+}
+
+.avatar {
+  width: rem(40);
+  height: rem(40);
+
+  border-radius: 50%;
+}
+
+.text {
+  @include regular-16;
+}
+
+.alignMiddle {
+  display: flex;
+  align-items: center;
+}
+
+.alignCenter {
+  display: flex;
+  justify-content: center;
+}

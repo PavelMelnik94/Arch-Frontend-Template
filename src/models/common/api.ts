@@ -11,6 +11,6 @@ export interface ErrorResponse {
 
 export type CustomAxiosError = AxiosError<ErrorResponse, ErrorResponse>
 
-export interface Image {
+export interface ImageDTO {
   image: string
 }

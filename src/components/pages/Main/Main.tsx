@@ -1,20 +1,15 @@
-import { cc } from 'utils/combineClasses'
-import styles from './styles.module.scss'
 import MainLayout from 'components/layouts/MainLayout'
+import PersonsList from 'components/widgets/PersonsList'
+import styles from './styles.module.scss'
 
-interface Props {
-  className?: string
-}
-
-const Main = ({ className }: Props) => {
+const Main = () => {
   return (
     <MainLayout>
-      <div className={cc(styles.mainRoot, className)}>
-        Main component
+      <div className={styles.mainRoot}>
+        <PersonsList />
       </div>
     </MainLayout>
   )
 }
-
 
 export default Main

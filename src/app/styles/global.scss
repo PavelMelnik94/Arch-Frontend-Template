@@ -1,9 +1,9 @@
-@use "styles/mixins/index.scss" as *;
-@use "./normalize.css";
-@use "./colors.scss";
-@use "./fonts.scss";
-@use "./root-variables.scss";
-@use "./themes/light.scss";
+@use 'styles/mixins/index.scss' as *;
+@use './normalize.css';
+@use './colors';
+@use './fonts';
+@use './root-variables';
+@use './themes/light';
 
 :root {
   color: var(--text-primary);
@@ -48,10 +48,10 @@ body {
   height: 100vh;
   height: 100lvh;
 
-  color: var(--white);
+  color: var(--text-primary);
   word-spacing: 0.1em;
 
-  background-color: var(--black);
+  background-color: var(--background-primary);
 
   overflow: hidden;
 
@@ -83,7 +83,7 @@ input,
 textarea,
 label,
 button,
-*[role="button"],
+*[role='button'],
 select,
 a {
   -webkit-tap-highlight-color: transparent;

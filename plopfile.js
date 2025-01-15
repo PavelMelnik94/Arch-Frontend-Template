@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 export default function (plop) {
   plop.setGenerator('create-component', {
     description: 'Create component',

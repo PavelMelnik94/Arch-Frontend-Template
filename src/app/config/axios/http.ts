@@ -3,7 +3,6 @@ import axios from 'axios'
 import { decamelizeKeys } from 'humps'
 import { interceptors } from './interseptors'
 
-
 export const http = axios.create({
   baseURL: appConfig.api.baseUrl,
   headers: {

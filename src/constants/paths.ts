@@ -1,6 +1,6 @@
 export enum Paths {
   WELCOME = '/',
-  MAIN= '/main',
+  MAIN = '/main',
   NOT_FOUND = '/404'
 }
 

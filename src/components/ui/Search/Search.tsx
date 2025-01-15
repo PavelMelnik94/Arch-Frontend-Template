@@ -1,7 +1,7 @@
-import { SearchField, Label, Input, Button, InputProps } from 'react-aria-components'
+import CustomSVG from 'components/ui/CustomSVG'
+import { SearchField, Label, Input, InputProps } from 'react-aria-components'
 import { useTranslation } from 'react-i18next'
 import { cc } from 'utils/combineClasses'
-import CustomSVG from 'components/ui/CustomSVG'
 import styles from './styles.module.scss'
 import { useSearch } from './useSearch'
 

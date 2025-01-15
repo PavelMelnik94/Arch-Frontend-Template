@@ -1,0 +1,21 @@
+@use 'styles/mixins' as *;
+
+.personsListRoot {
+}
+
+.personsListHeader {
+  position: sticky;
+  top: 0;
+
+  display: grid;
+  grid-template: '. . . . . .' 1fr / 40fr 250fr 250fr 250fr 80fr 30fr;
+  gap: rem(20);
+
+  padding: rem(20) 0;
+
+  background: var(--background-primary);
+}
+
+.personsListHeaderText {
+  @include semibold-16;
+}
