@@ -1,3 +1,5 @@
+описание архитектуры https://habr.com/ru/companies/doubletapp/articles/870236/?code=2bd81802c38cde8b26f25b6c88610692&state=FiRNr0wrSlpVKBAnhtzmxBaT&hl=ru
+
 ## Локальная сборка приложения с использованием Docker
 
 В корневой папке проекта выполнить команды:
