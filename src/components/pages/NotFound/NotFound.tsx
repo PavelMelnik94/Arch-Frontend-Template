@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-const NotFound = () => {
+function NotFound() {
   return <div className={styles.notFoundRoot}>Not Found</div>
 }
 

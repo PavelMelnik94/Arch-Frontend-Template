@@ -1,7 +1,8 @@
-import CustomSVG from 'components/ui/CustomSVG'
-import { SearchField, Label, Input, InputProps } from 'react-aria-components'
+import type { InputProps } from 'react-aria-components'
+import CustomSVG from '@/components/ui/CustomSVG'
+import { cc } from '@/utils/combineClasses'
+import { Input, Label, SearchField } from 'react-aria-components'
 import { useTranslation } from 'react-i18next'
-import { cc } from 'utils/combineClasses'
 import styles from './styles.module.scss'
 import { useSearch } from './useSearch'
 
@@ -15,7 +16,7 @@ interface Props extends Omit<InputProps, 'size'> {
   className?: string
 }
 
-const Search = (props: Props) => {
+function Search(props: Props) {
   const { t } = useTranslation(['catalog'])
 
   const {
@@ -35,7 +36,7 @@ const Search = (props: Props) => {
     onInputValue,
     onInputDebounceValue,
     initialValue,
-    isFocusOnMount
+    isFocusOnMount,
   )
 
   return (

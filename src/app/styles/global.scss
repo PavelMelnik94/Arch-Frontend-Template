@@ -1,9 +1,9 @@
-@use 'styles/mixins/index.scss' as *;
-@use './normalize.css';
-@use './colors';
-@use './fonts';
-@use './root-variables';
-@use './themes/light';
+@use "styles/mixins/index.scss" as *;
+@use "./normalize.css";
+@use "./colors";
+@use "./fonts";
+@use "./root-variables";
+@use "./themes/light";
 
 :root {
   color: var(--text-primary);
@@ -83,7 +83,7 @@ input,
 textarea,
 label,
 button,
-*[role='button'],
+*[role="button"],
 select,
 a {
   -webkit-tap-highlight-color: transparent;

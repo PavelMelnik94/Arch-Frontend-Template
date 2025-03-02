@@ -1,33 +1,36 @@
-/* eslint-disable react/display-name */
+import type { AxiosError } from 'axios'
+import type { ComponentType } from 'react'
+import process from 'node:process'
+import { queryClientErrorHandler } from '@/app/utils/queryClientErrorHandler'
+import { parseRetryAfter } from '@/utils/parseRetryAfter'
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { queryClientErrorHandler } from 'app/utils/queryClientErrorHandler'
-import { isAxiosError, AxiosError } from 'axios'
-import { ComponentType, Suspense, useState } from 'react'
-import { parseRetryAfter } from 'utils/parseRetryAfter'
+import { isAxiosError } from 'axios'
+import { Suspense, useState } from 'react'
 
-const withQueryProvider =
-  (WrappedComponent: ComponentType) =>
-  ({ ...props }) => {
+function withQueryProvider(WrappedComponent: ComponentType) {
+  return ({ ...props }) => {
     const [queryClient] = useState(
       new QueryClient({
         queryCache: new QueryCache({
           onError: async (error, query) => {
             if (isAxiosError(error) && error.response?.data.type) {
               await queryClientErrorHandler(error.response?.data.type, query)
-            } else {
+            }
+            else {
               console.error('Unhandled non axios error in queryCash', error)
             }
-          }
+          },
         }),
         mutationCache: new MutationCache({
-          onError: async error => {
+          onError: async (error) => {
             if (isAxiosError(error) && error.response?.data.type) {
               await queryClientErrorHandler(error.response?.data.type)
-            } else {
+            }
+            else {
               console.error('Unhandled non axios error in mutationCash', error)
             }
-          }
+          },
         }),
         defaultOptions: {
           queries: {
@@ -37,8 +40,8 @@ const withQueryProvider =
               const axiosError = error as AxiosError
 
               if (
-                axiosError?.response?.status === 429 &&
-                axiosError?.response?.headers['retry-after']
+                axiosError?.response?.status === 429
+                && axiosError?.response?.headers['retry-after']
               ) {
                 return true
               }
@@ -53,15 +56,15 @@ const withQueryProvider =
                 return retryAfterMs
               }
               return 200
-            }
+            },
           },
           mutations: {
             retry: (failureCount: number, error: Error) => {
               const axiosError = error as AxiosError
 
               if (
-                axiosError?.response?.status === 429 &&
-                axiosError?.response?.headers['retry-after']
+                axiosError?.response?.status === 429
+                && axiosError?.response?.headers['retry-after']
               ) {
                 return true
               }
@@ -76,10 +79,10 @@ const withQueryProvider =
                 return retryAfterMs
               }
               return 200
-            }
-          }
-        }
-      })
+            },
+          },
+        },
+      }),
     )
 
     return (
@@ -91,5 +94,6 @@ const withQueryProvider =
       </Suspense>
     )
   }
+}
 
 export default withQueryProvider

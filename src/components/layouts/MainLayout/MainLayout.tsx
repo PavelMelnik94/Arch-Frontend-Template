@@ -1,5 +1,6 @@
-import { ReactNode } from 'react'
-import { cc } from 'utils/combineClasses'
+import type { ReactNode } from 'react'
+import { cc } from '@/utils/combineClasses'
+
 import styles from './styles.module.scss'
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   className?: string
 }
 
-const MainLayout = ({ children, className }: Props) => {
+function MainLayout({ children, className }: Props) {
   return (
     <div className={cc(styles.mainLayoutRoot, className)}>
       <div className={styles.content}>{children}</div>

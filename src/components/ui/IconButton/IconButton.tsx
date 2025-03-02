@@ -1,5 +1,6 @@
-import { Button as AriaButton, ButtonProps } from 'react-aria-components'
-import { cc } from 'utils/combineClasses'
+import type { ButtonProps } from 'react-aria-components'
+import { cc } from '@/utils/combineClasses'
+import { Button as AriaButton } from 'react-aria-components'
 import CustomSVG from '../CustomSVG'
 import styles from './styles.module.scss'
 
@@ -13,7 +14,7 @@ interface Props extends ButtonProps {
   iconClassName?: string
 }
 
-const IconButton = (props: Props) => {
+function IconButton(props: Props) {
   const {
     children,
     variant = 'solid',
@@ -21,7 +22,7 @@ const IconButton = (props: Props) => {
     size = 'regular',
     rounding = 'first',
     className,
-    iconClassName
+    iconClassName,
   } = props
 
   return (
@@ -32,7 +33,7 @@ const IconButton = (props: Props) => {
         styles[`button_color_${color}`],
         styles[`button_size_${size}`],
         styles[`button_rounding_${rounding}`],
-        className
+        className,
       )}
     >
       <CustomSVG className={cc(styles.icon, iconClassName)}>{children}</CustomSVG>

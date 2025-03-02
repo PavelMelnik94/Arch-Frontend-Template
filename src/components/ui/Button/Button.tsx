@@ -1,6 +1,7 @@
-import { ReactNode } from 'react'
-import { Button as AriaButton, ButtonProps } from 'react-aria-components'
-import { cc } from 'utils/combineClasses'
+import type { ReactNode } from 'react'
+import type { ButtonProps } from 'react-aria-components'
+import { cc } from '@/utils/combineClasses'
+import { Button as AriaButton } from 'react-aria-components'
 import styles from './styles.module.scss'
 
 interface Props extends ButtonProps {
@@ -12,7 +13,7 @@ interface Props extends ButtonProps {
   maxWidth?: boolean
 }
 
-const Button = (props: Props) => {
+function Button(props: Props) {
   const { className, children, variant = 'solid', color = 'first', maxWidth, ...otherProps } = props
 
   return (
@@ -22,7 +23,7 @@ const Button = (props: Props) => {
         styles[`button_variant_${variant}`],
         styles[`button_color_${color}`],
         maxWidth && styles.maxWidth,
-        className
+        className,
       )}
     >
       {children}

@@ -1,6 +1,6 @@
-import { Icons } from 'constants/icons'
+import { Icons } from '@/constants/icons'
+import { cc } from '@/utils/combineClasses'
 import toast from 'react-hot-toast'
-import { cc } from 'utils/combineClasses'
 import IconButton from '../IconButton'
 import styles from './styles.module.scss'
 
@@ -10,7 +10,7 @@ interface Props {
   className?: string
 }
 
-const Toast = ({ className, toastId, message }: Props) => {
+function Toast({ className, toastId, message }: Props) {
   return (
     <span className={cc(styles.toastRoot, className)}>
       <span className={styles.toastMessage}>{message}</span>

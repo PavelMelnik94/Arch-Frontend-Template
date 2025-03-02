@@ -1,9 +1,10 @@
-import { excludedErrorCodes, excludedErrorPaths } from 'constants/excludedErrors'
-import { AxiosResponse, isAxiosError } from 'axios'
+import type { AxiosResponse } from 'axios'
+import { excludedErrorCodes, excludedErrorPaths } from '@/constants/excludedErrors'
+import { getErrorMessage, getErrorType } from '@/utils/errors'
+import { getToastMessage } from '@/utils/toastMessage'
+import { isAxiosError } from 'axios'
 import { camelizeKeys } from 'humps'
 import { t } from 'i18next'
-import { getErrorMessage, getErrorType } from 'utils/errors'
-import { getToastMessage } from 'utils/toastMessage'
 
 export const interceptors = {
   onSuccess: (response: AxiosResponse) => {
@@ -18,10 +19,10 @@ export const interceptors = {
       const requestUrl = error.config?.url
 
       if (
-        statusCode &&
-        requestUrl &&
-        !excludedErrorPaths[requestUrl]?.includes(statusCode) &&
-        !excludedErrorCodes.includes(statusCode)
+        statusCode
+        && requestUrl
+        && !excludedErrorPaths[requestUrl]?.includes(statusCode)
+        && !excludedErrorCodes.includes(statusCode)
       ) {
         const type = getErrorType(error)
 
@@ -31,5 +32,5 @@ export const interceptors = {
       }
     }
     Promise.reject(error)
-  }
+  },
 }

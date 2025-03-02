@@ -1,4 +1,4 @@
-@use 'styles/mixins' as *;
+@use "styles/mixins" as *;
 
 .personsListRoot {
 }
@@ -8,7 +8,7 @@
   top: 0;
 
   display: grid;
-  grid-template: '. . . . . .' 1fr / 40fr 250fr 250fr 250fr 80fr 30fr;
+  grid-template: ". . . . . ." 1fr / 40fr 250fr 250fr 250fr 80fr 30fr;
   gap: rem(20);
 
   padding: rem(20) 0;

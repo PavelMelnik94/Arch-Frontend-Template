@@ -1,5 +1,4 @@
-/* eslint-disable no-useless-escape */
-type RegexsType = {
+interface RegexsType {
   EMAIL: RegExp
   NAME: RegExp
   PHONE: RegExp
@@ -7,9 +6,9 @@ type RegexsType = {
 
 const Regexs: RegexsType = {
   EMAIL:
-    /(?!.*(-|_)\1)^(([^<>()\[\]\\!?@#=^$%&*.,;:\/\s@"]+(\.[^<>()\[\]\\!?@#=^$%&*.,;:\/\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-\_0-9]+\.)+[a-zA-Z]{2,}))$/,
+    /(?!.*(-|_)\1)^(([^<>()[\]\\!?@#=^$%&*.,;:/\s"]+(\.[^<>()[\]\\!?@#=^$%&*.,;:/\s"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])|(([\w\-]+\.)+[a-z]{2,}))$/i,
   NAME: /(^[а-яА-Яa-zA-Z .-]+$)/,
-  PHONE: /^\+[\d]{11,15}$/
+  PHONE: /^\+\d{11,15}$/,
 }
 
 export default Regexs

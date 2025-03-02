@@ -1,4 +1,4 @@
-import { cc } from 'utils/combineClasses'
+import { cc } from '@/utils/combineClasses'
 import styles from './styles.module.scss'
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   className?: string
 }
 
-const LabelCounter = ({ value, className }: Props) => {
+function LabelCounter({ value, className }: Props) {
   return <div className={cc(styles.labelCounterRoot, className)}>{value}</div>
 }
 

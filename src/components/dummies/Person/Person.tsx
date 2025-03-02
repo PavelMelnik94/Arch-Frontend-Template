@@ -1,6 +1,6 @@
-import { Icons } from 'constants/icons'
-import IconButton from 'components/ui/IconButton'
-import { cc } from 'utils/combineClasses'
+import IconButton from '@/components/ui/IconButton'
+import { Icons } from '@/constants/icons'
+import { cc } from '@/utils/combineClasses'
 import styles from './styles.module.scss'
 
 interface Props {
@@ -13,15 +13,15 @@ interface Props {
   className?: string
 }
 
-const Person = ({
+function Person({
   avatar,
   fullname,
   companyTitle,
   companyName,
   age,
   handlePressDelete,
-  className
-}: Props) => {
+  className,
+}: Props) {
   return (
     <div className={cc(styles.personRoot, className)}>
       <div className={cc(styles.alignMiddle, styles.alignCenter)}>

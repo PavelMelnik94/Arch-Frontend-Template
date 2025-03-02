@@ -1,6 +1,7 @@
-import { Link, LinkProps } from '@tanstack/react-router'
-import { ReactNode } from 'react'
-import { cc } from 'utils/combineClasses'
+import type { LinkProps } from '@tanstack/react-router'
+import type { ReactNode } from 'react'
+import { cc } from '@/utils/combineClasses'
+import { Link } from '@tanstack/react-router'
 import Loader from '../Loader'
 import styles from './styles.module.scss'
 
@@ -15,7 +16,7 @@ interface Props extends LinkProps {
   isLoading?: boolean
 }
 
-const ButtonLink = (props: Props) => {
+function ButtonLink(props: Props) {
   const {
     className,
     children,
@@ -34,7 +35,7 @@ const ButtonLink = (props: Props) => {
         styles[`button_color_${color}`],
         isLoading && styles.buttonLoading,
         maxWidth && styles.maxWidth,
-        className
+        className,
       )}
       disabled={isLoading || isDisabled}
       {...otherProps}

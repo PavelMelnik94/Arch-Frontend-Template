@@ -4,7 +4,7 @@ export enum ErrorTypes {
   API_KEY_IS_INCORRECT = 'api_key_is_incorrect',
   // Others
   UNKNOWN = 'unknown',
-  NOT_FOUND = 'not_found'
+  NOT_FOUND = 'not_found',
 }
 
 type ErrorMessages = {
@@ -17,10 +17,10 @@ export const errorMessages: ErrorMessages = {
   [ErrorTypes.API_KEY_IS_INCORRECT]: 'common:errors.somethingWentWrong',
   // OTHERS
   [ErrorTypes.UNKNOWN]: 'common:errors.somethingWentWrong',
-  [ErrorTypes.NOT_FOUND]: 'common:errors.notFound'
+  [ErrorTypes.NOT_FOUND]: 'common:errors.notFound',
 }
 
 export const unauthorizedErrorTypes = [
   ErrorTypes.API_KEY_IS_NOT_SPECIFIED,
-  ErrorTypes.API_KEY_IS_INCORRECT
+  ErrorTypes.API_KEY_IS_INCORRECT,
 ]

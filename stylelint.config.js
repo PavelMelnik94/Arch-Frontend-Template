@@ -4,9 +4,8 @@ import { propertyOrdering } from 'stylelint-semantic-groups'
 
 export default {
   extends: ['stylelint-config-standard-scss', 'stylelint-prettier/recommended'],
-  plugins: ['stylelint-order', 'stylelint-prettier'],
+  plugins: ['stylelint-order'],
   rules: {
-    'prettier/prettier': true,
     'selector-class-pattern': null,
     'declaration-empty-line-before': null,
     'shorthand-property-no-redundant-values': null,
@@ -19,20 +18,20 @@ export default {
     'keyframes-name-pattern': [
       '^[a-z]+([A-Z][a-z0-9]*)*$',
       {
-        message: 'Expected keyframe name to be camelCase'
-      }
+        message: 'Expected keyframe name to be camelCase',
+      },
     ],
     'selector-pseudo-class-no-unknown': [
       true,
       {
-        ignorePseudoClasses: ['global']
-      }
+        ignorePseudoClasses: ['global'],
+      },
     ],
     'property-no-unknown': [
       true,
       {
-        ignoreProperties: ['desktop', 'tablet', 'mobile']
-      }
+        ignoreProperties: ['desktop', 'tablet', 'mobile'],
+      },
     ],
     'order/order': [
       'custom-properties',
@@ -40,33 +39,33 @@ export default {
       {
         type: 'at-rule',
         name: 'include',
-        hasBlock: false
+        hasBlock: false,
       },
       {
         type: 'at-rule',
-        name: 'mixin'
+        name: 'mixin',
       },
       'declarations',
       {
         type: 'rule',
-        selector: /^&:|^:[\w-]+$/
+        selector: /^&:|^:[\w-]+$/,
       },
       {
         type: 'rule',
-        selector: /^&::|^::[\w-]+$/
+        selector: /^&::|^::[\w-]+$/,
       },
       'at-rules',
       'rules',
       {
         type: 'at-rule',
         name: 'include',
-        hasBlock: true
+        hasBlock: true,
       },
       {
         type: 'at-rule',
-        name: 'media'
-      }
+        name: 'media',
+      },
     ],
-    'order/properties-order': propertyOrdering
-  }
+    'order/properties-order': propertyOrdering,
+  },
 }

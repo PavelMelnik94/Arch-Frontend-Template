@@ -1,6 +1,7 @@
+import process from 'node:process'
+import AppLayout from '@/app/AppLayout'
 import { RootRoute, Router } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
-import AppLayout from 'app/AppLayout'
 import { notFoundRoute, routes } from './routes'
 
 export const rootRoute = new RootRoute({
@@ -9,7 +10,7 @@ export const rootRoute = new RootRoute({
       <AppLayout />
       {process.env.NODE_ENV !== 'production' && <TanStackRouterDevtools />}
     </>
-  )
+  ),
 })
 
 const routeTree = rootRoute.addChildren(routes)

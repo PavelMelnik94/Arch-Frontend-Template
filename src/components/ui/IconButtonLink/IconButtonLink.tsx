@@ -1,5 +1,6 @@
-import { Link, LinkProps } from '@tanstack/react-router'
-import { cc } from 'utils/combineClasses'
+import type { LinkProps } from '@tanstack/react-router'
+import { cc } from '@/utils/combineClasses'
+import { Link } from '@tanstack/react-router'
 import CustomSVG from '../CustomSVG'
 import styles from './styles.module.scss'
 
@@ -13,7 +14,7 @@ interface Props extends LinkProps {
   iconClassName?: string
 }
 
-const IconButtonLink = (props: Props) => {
+function IconButtonLink(props: Props) {
   const {
     children,
     variant = 'solid',
@@ -21,7 +22,7 @@ const IconButtonLink = (props: Props) => {
     size = 'regular',
     rounding = 'first',
     className,
-    iconClassName
+    iconClassName,
   } = props
 
   return (
@@ -34,7 +35,7 @@ const IconButtonLink = (props: Props) => {
         styles[`button_size_${size}`],
         styles[`button_rounding_${rounding}`],
         styles.iconButtonLink,
-        className
+        className,
       )}
     >
       <CustomSVG className={cc(styles.icon, iconClassName)}>{children}</CustomSVG>

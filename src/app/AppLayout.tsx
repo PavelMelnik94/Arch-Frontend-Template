@@ -1,7 +1,7 @@
 import { Outlet } from '@tanstack/react-router'
 import { Toaster } from 'react-hot-toast'
 
-const AppLayout = () => {
+function AppLayout() {
   return (
     <>
       <Toaster />

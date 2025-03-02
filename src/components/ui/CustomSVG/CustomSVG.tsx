@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react'
-import { cc } from 'utils/combineClasses'
+import type { HTMLAttributes } from 'react'
+import { cc } from '@/utils/combineClasses'
 import styles from './styles.module.scss'
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -7,7 +7,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   className?: string
 }
 
-const CustomSVG = ({ className, children, ...otherDivProps }: Props) => {
+function CustomSVG({ className, children, ...otherDivProps }: Props) {
   return (
     <div className={cc(styles.customSvgRoot, className)} {...otherDivProps}>
       {children}

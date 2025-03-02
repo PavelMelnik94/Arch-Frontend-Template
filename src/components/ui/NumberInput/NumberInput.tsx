@@ -1,6 +1,6 @@
-import { Icons } from 'constants/icons'
+import { Icons } from '@/constants/icons'
+import { cc } from '@/utils/combineClasses'
 import { Button } from 'react-aria-components'
-import { cc } from 'utils/combineClasses'
 import CustomSVG from '../CustomSVG'
 import styles from './styles.module.scss'
 
@@ -15,7 +15,7 @@ interface Props {
   isDisabled?: boolean
 }
 
-const NumberInput = ({
+function NumberInput({
   color,
   value,
   onDecrement,
@@ -23,8 +23,8 @@ const NumberInput = ({
   className,
   minValue,
   maxValue,
-  isDisabled
-}: Props) => {
+  isDisabled,
+}: Props) {
   return (
     <div className={cc(styles.numberInputRoot, styles[`numberInput_color_${color}`], className)}>
       <div className={styles.inputWrapper}>

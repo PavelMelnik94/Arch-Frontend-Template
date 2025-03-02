@@ -1,7 +1,8 @@
-import { http } from 'app/config/axios/http'
-import { UserRequest, UserResponse, UsersResponse } from 'models/user/api'
+import type { UserRequest, UserResponse, UsersResponse } from '@/models/user/api'
+import { http } from '@/app/config/axios/http'
 
-export const getUser = (data: UserRequest) =>
-  http.get<UserResponse, UserResponse>(`/users/${data.id}`)
+export function getUser(data: UserRequest) {
+  return http.get<UserResponse, UserResponse>(`/users/${data.id}`)
+}
 
 export const getUsers = () => http.get<UsersResponse, UsersResponse>('/users')

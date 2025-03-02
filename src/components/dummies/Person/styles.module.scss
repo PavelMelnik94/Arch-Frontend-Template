@@ -1,8 +1,8 @@
-@use 'styles/mixins' as *;
+@use "styles/mixins" as *;
 
 .personRoot {
   display: grid;
-  grid-template: '. . . . . .' 1fr / 40fr 250fr 250fr 250fr 80fr 30fr;
+  grid-template: ". . . . . ." 1fr / 40fr 250fr 250fr 250fr 80fr 30fr;
   gap: rem(20);
 }
 

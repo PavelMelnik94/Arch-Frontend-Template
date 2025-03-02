@@ -1,9 +1,9 @@
-import { Paths } from 'constants/paths'
-import ButtonLink from 'components/ui/ButtonLink'
+import ButtonLink from '@/components/ui/ButtonLink'
+import { Paths } from '@/constants/paths'
 import { useTranslation } from 'react-i18next'
 import styles from './styles.module.scss'
 
-const Welcome = () => {
+function Welcome() {
   const { t } = useTranslation(['welcome'])
 
   return (

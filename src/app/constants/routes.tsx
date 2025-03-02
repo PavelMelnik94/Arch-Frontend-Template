@@ -1,10 +1,9 @@
-/* eslint-disable react-refresh/only-export-components */
-import { Paths } from 'constants/paths'
+import Main from '@/components/pages/Main'
+import NotFound from '@/components/pages/NotFound'
+import Welcome from '@/components/pages/Welcome'
+import Suspense from '@/components/wrappers/Suspense/Suspense'
+import { Paths } from '@/constants/paths'
 import { NotFoundRoute, Route } from '@tanstack/react-router'
-import Main from 'components/pages/Main'
-import NotFound from 'components/pages/NotFound'
-import Welcome from 'components/pages/Welcome'
-import Suspense from 'components/wrappers/Suspense/Suspense'
 import { rootRoute } from './router'
 
 const welcomeRoute = new Route({
@@ -14,7 +13,7 @@ const welcomeRoute = new Route({
     <Suspense>
       <Welcome />
     </Suspense>
-  )
+  ),
 })
 
 const mainRoute = new Route({
@@ -24,7 +23,7 @@ const mainRoute = new Route({
     <Suspense>
       <Main />
     </Suspense>
-  )
+  ),
 })
 
 export const notFoundRoute = new NotFoundRoute({
@@ -33,7 +32,7 @@ export const notFoundRoute = new NotFoundRoute({
     <Suspense>
       <NotFound />
     </Suspense>
-  )
+  ),
 })
 
 export const routes = [welcomeRoute, mainRoute]
