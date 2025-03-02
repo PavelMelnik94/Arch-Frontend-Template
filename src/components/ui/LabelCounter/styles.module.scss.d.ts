@@ -1,1 +1,1 @@
-export declare const labelCounterRoot: string
+export declare const labelCounterRoot: string;

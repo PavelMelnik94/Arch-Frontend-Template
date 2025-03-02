@@ -1,1 +1,1 @@
-export declare const headerRoot: string
+export declare const headerRoot: string;

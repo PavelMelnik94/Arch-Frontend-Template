@@ -1,1 +1,1 @@
-export declare const notFoundRoot: string
+export declare const notFoundRoot: string;

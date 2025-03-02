@@ -1,6 +1,7 @@
 import { Icons } from '@/constants/icons'
 import { cc } from '@/utils/combineClasses'
 import toast from 'react-hot-toast'
+
 import IconButton from '../IconButton'
 import styles from './styles.module.scss'
 

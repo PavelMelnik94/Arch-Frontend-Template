@@ -1,1 +1,1 @@
-export declare const customSvgRoot: string
+export declare const customSvgRoot: string;

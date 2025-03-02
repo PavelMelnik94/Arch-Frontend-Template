@@ -1,1 +1,1 @@
-export declare const mainRoot: string
+export declare const mainRoot: string;

@@ -1,8 +1,10 @@
 import type { InputProps } from 'react-aria-components'
+
 import CustomSVG from '@/components/ui/CustomSVG'
 import { cc } from '@/utils/combineClasses'
 import { Input, Label, SearchField } from 'react-aria-components'
 import { useTranslation } from 'react-i18next'
+
 import styles from './styles.module.scss'
 import { useSearch } from './useSearch'
 
