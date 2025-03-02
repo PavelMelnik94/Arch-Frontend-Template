@@ -1,4 +1,5 @@
 import type { UserResponse } from '@/models/user/api'
+
 import { create } from 'zustand'
 
 interface State {

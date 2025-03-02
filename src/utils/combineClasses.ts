@@ -1,4 +1,4 @@
-const combineClasses = (...classes: Array<string | undefined | null | boolean>) => {
+function combineClasses(...classes: Array<string | undefined | null | boolean>) {
   return classes.filter(Boolean).join(' ')
 }
 

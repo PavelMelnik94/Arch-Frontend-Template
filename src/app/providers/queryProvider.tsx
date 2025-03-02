@@ -1,6 +1,6 @@
 import type { AxiosError } from 'axios'
 import type { ComponentType } from 'react'
-import process from 'node:process'
+
 import { queryClientErrorHandler } from '@/app/utils/queryClientErrorHandler'
 import { parseRetryAfter } from '@/utils/parseRetryAfter'
 import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'

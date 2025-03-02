@@ -5,7 +5,7 @@ export default antfu({
   react: true,
 
   rules: {
-
+    'regexp/no-obscure-range': 'warn',
     'perfectionist/sort-imports': [
       'error',
       {

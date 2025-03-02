@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 type Func<T extends any[], R> = (...a: T) => R
 
 export default function compose(...funcs: Func<any, any>[]) {
@@ -13,14 +12,11 @@ export default function compose(...funcs: Func<any, any>[]) {
   return funcs.reduce(
     (a, b) =>
       (...args: any) =>
-        a(b(...args))
+        a(b(...args)),
   )
 }
 
-export const debounce = <T extends (...args: any[]) => ReturnType<T>>(
-  callback: T,
-  timeout: number
-): ((...args: Parameters<T>) => void) => {
+export function debounce<T extends (...args: any[]) => ReturnType<T>>(callback: T, timeout: number): ((...args: Parameters<T>) => void) {
   let timer: ReturnType<typeof setTimeout>
 
   return function (this: any, ...args: Parameters<T>) {

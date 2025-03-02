@@ -1,6 +1,7 @@
 import IconButton from '@/components/ui/IconButton'
 import { Icons } from '@/constants/icons'
 import { cc } from '@/utils/combineClasses'
+
 import styles from './styles.module.scss'
 
 interface Props {

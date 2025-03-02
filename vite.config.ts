@@ -1,5 +1,5 @@
-import path from 'node:path'
 import react from '@vitejs/plugin-react-swc'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import svgr from 'vite-plugin-svgr'
 
@@ -16,6 +16,7 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src') },
+      { find: 'styles', replacement: path.resolve(__dirname, 'src/styles') },
     ],
   },
 })

@@ -1,7 +1,7 @@
-import process from 'node:process'
 import AppLayout from '@/app/AppLayout'
 import { RootRoute, Router } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
+
 import { notFoundRoute, routes } from './routes'
 
 export const rootRoute = new RootRoute({
